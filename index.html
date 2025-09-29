@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>批量视频修复器</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { margin: 5px 0; }
+    #log { white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; height: 200px; overflow: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 5px; text-align: center; }
+    progress { width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>批量视频修复器</h1>
+  <button id="selectBtn">选择视频文件</button>
+  <button id="repairBtn" disabled>开始修复</button>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>文件名</th>
+        <th>编码</th>
+        <th>时长</th>
+        <th>状态</th>
+        <th>进度</th>
+      </tr>
+    </thead>
+    <tbody id="fileTable"></tbody>
+  </table>
+  
+  <div id="log"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>

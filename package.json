@@ -1,0 +1,43 @@
+{
+  "name": "video-repair",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+  "fluent-ffmpeg": "file:fluent-ffmpeg-2.1.3.tgz"
+	},
+	"devDependencies": {
+  "electron": "file:electron-38.2.0.tgz",
+  "electron-builder": "file:electron-builder-26.0.12.tgz"
+	},
+  "build": {
+    "appId": "com.example.videorepair",
+    "productName": "VideoRepair",
+    "files": [
+      "**/*",
+      "ffmpeg/**"
+    ],
+    "extraResources": [
+      {
+        "from": "ffmpeg",
+        "to": "ffmpeg"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
